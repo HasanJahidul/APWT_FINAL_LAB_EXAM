@@ -12,12 +12,12 @@ const AdminNavbar = ()=>{
         <div class="collapse navbar-collapse" id="navigation">
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item">
-                <Link to="/job/create">
+                <Link to="/job/add">
                 <p>Add Job</p>
                 </Link>
                 </li>
                 <li class="nav-item ">
-                <Link to="/employer/list">
+                <Link to="/job/list">
                     <p>Job List</p>
                 </Link>
                 </li>

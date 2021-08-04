@@ -17,3 +17,20 @@ use Illuminate\Support\Facades\Route;
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+Route::get('/jobs', 'JobController@index')->name('jobs.all');
+Route::post('/jobs', 'JobController@create')->name('jobs.create');
+
+Route::get('/jobs/{job}', 'JobController@show')->name('jobs.show');
+
+Route::put('/jobs/{job}', 'JobController@update')->name('jobs.update');
+Route::delete('/jobs/{job}', 'JobController@destroy')->name('jobs.destroy');
+
+
+Route::get('/employer', 'EmployerController@index')->name('employer.all');
+Route::post('/employer', 'EmployerController@create')->name('employer.create');
+
+Route::get('/employer/{job}', 'EmployerController@show')->name('employer.show');
+
+Route::put('/employer/{job}', 'EmployerController@update')->name('employer.update');
+Route::delete('/employer/{job}', 'EmployerController@destroy')->name('employer.destroy');
