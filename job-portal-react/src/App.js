@@ -1,24 +1,26 @@
-import logo from './logo.svg';
 import RegisterEmployer from './components/employer/RegisterEmployer';
-import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
-
-import AdminNavbar from './components/AdminNavbar';
-import './App.css';
+import AddJob from './components/job/AddJob';
+import Login from './components/login';
+import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';;
 
 function App() {
   return (
     <Router>
-      <AdminNavbar/>
+      
       <Switch>
           <Route exact path='/'> 
-              <h1>Welcome Admin!</h1>
+          <h1 align="center">Welcome To Job Portal!</h1>
+          <Login />
           </Route>
-          
           <Route path='/register'>
-              <RegisterEmployer status='create'/>
+              <RegisterEmployer status='add'/>
           </Route>
+
+          <Route path='/job/add'>
+              <AddJob status='add'/>
+          </Route>
+
           <Route path='*'>
-          
               404 not found
           </Route>          
       </Switch>
